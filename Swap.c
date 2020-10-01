@@ -1,10 +1,8 @@
 #include<stdio.h>
 int main() {
     int a,b;
-    printf("Enter first number to swap: ");
-    scanf("%d",&a);
-    printf("Enter second number to swap: ");
-    scanf("%d",&b);
+    printf("Enter the two number to swap: ");
+    scanf("%d",&a,&b);
     a=a+b;
     b=a-b;
     a=a-b;
