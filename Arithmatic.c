@@ -11,7 +11,14 @@ int main() {
     printf("\nSubtraction: %f",c);
     c=a*b;
     printf("\nMultiplication: %f",c);
+    if(b==0)
+    {
+    printf("Division by zero Not possible");
+    }
+    else
+    {
     c=a/b;
     printf("\nDivision: %f",c);
+    }
     return 0;
 }
