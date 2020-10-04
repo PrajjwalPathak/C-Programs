@@ -1,37 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
+int main()
+{
+   int array[100], position, c, n;
 
-void Input(int *P, int N) {
-    int i;
-    for(i=0;i<N;i++) {
-        scanf("%d",&P[i]);
-    }
-}
+   printf("Enter number of elements in array\n");
+   scanf("%d", &n);
 
-void Delete(int *P, int N, int l) {
-    int i;
-    for(i=l-1;i<N-1;i++) {
-        P[i]=P[i+1];
-    }
-}
+   printf("Enter %d elements\n", n);
 
-void Display(int *P, int N) {
-    int i;
-    for(i=0;i<N-1;i++) {
-        printf("%d ",P[i]);
-    }
-}
+   for (c = 0; c < n; c++)
+      scanf("%d", &array[c]);
 
-int main() {
-    int n=0,a[50],pos;
-    printf("Enter Array Size: ");
-    scanf("%d",&n);
-    printf("Enter the elements of Array: ");
-    Input(a,n);
-    printf("Enter the position you want to delete: ");
-    scanf("%d",&pos);
-    Delete(a,n,pos);
-    printf("New Array: ");
-    Display(a,n);
+   printf("Enter the location where you wish to delete element\n");
+   scanf("%d", &position);
 
-    return 0;
+   if (position >= n+1)
+      printf("Deletion not possible.\n");
+   else
+   {
+      for (c = position - 1; c < n - 1; c++)
+         array[c] = array[c+1];
+
+      printf("Resultant array:\n");
+
+      for (c = 0; c < n - 1; c++)
+         printf("%d\n", array[c]);
+   }
+
+   return 0;
 }
