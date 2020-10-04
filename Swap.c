@@ -2,7 +2,7 @@
 int main() {
     int a,b;
     printf("Enter the two number to swap: ");
-    scanf("%d",&a,&b);
+    scanf("%d %d",&a,&b);
     a=a+b;
     b=a-b;
     a=a-b;
