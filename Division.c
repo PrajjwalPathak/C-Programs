@@ -6,10 +6,16 @@ int main() {
     scanf("%d",&D);
     printf("Enter the divisor: ");
     scanf("%d",&d);
+    if(d==0)
+    {
+     printf("Division not possible");
+    }
+     else
+    {
     q=D/d;
     r=D%d;
     printf("\nQuotient: %f",q);
     printf("\nRemainder: %f",r);
-
+    }
     return 0;
 }
