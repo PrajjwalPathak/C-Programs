@@ -1,3 +1,3 @@
 # C-Programs
-Basic C Programs
+Basic C Programs.
 Open for Contributions!
