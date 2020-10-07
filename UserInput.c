@@ -1,4 +1,7 @@
+//Program to take input from the user
+
 #include<stdio.h>
+
 int main() {
     int i;
     printf("Enter a number: ");
