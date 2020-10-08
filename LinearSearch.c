@@ -1,3 +1,5 @@
+//Program for Linear Search to search an element
+
 #include<stdio.h>
 
 void Input(int *P, int N) {
@@ -18,6 +20,7 @@ int Search(int *P, int N, int E) {
 }
 
 int main() {
+    
     int n=0,a[50],e,l;
     printf("Enter Array Size: ");
     scanf("%d",&n);
@@ -32,6 +35,7 @@ int main() {
     else {
         printf("Element not found");
     }
+
     return 0;
 }
 
