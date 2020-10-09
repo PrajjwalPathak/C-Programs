@@ -1,3 +1,5 @@
+//Program to rotate the elements of an array to the right side by k times
+
 #include<stdio.h>
 
 void Input(int *P, int N) {
