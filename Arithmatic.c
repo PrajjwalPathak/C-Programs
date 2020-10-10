@@ -1,3 +1,5 @@
+//Program to apply arithmatic operations on two numbers
+
 #include<stdio.h>
 int main() {
     float a,b,c;
