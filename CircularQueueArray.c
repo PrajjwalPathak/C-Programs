@@ -1,11 +1,12 @@
+//Program to demonstrate Circular Queue Array
+
 #include<stdio.h>
 #include<stdlib.h>
 
 # define MAX 5       //As per question given
 
 //Queue Structure 
-struct Cqueue
-{
+struct Cqueue {
     int front;
     int rear;
     int cqueue_arr[MAX];
@@ -15,45 +16,52 @@ struct Cqueue
 };
 
 //insert function
-void enqueue(int item, struct CQueue *cq)
-{
-    if((cq->front == 0 && cq->rear == MAX-1) || (cq->front == cq->rear+1))
-    {
+void enqueue(int item, struct CQueue *cq) {
+
+    if((cq->front == 0 && cq->rear == MAX-1) || (cq->front == cq->rear+1)) {
+
         printf("Warning!! Queue Overflow\n");
         return;
     }
-    if(cq->front == -1)
-    {
+
+    if(cq->front == -1) {
+
         cq->front = 0;
         cq->rear = 0;
     }
-    else
-    {
-        if(cq->rear == MAX-1)
+    else {
+
+        if(cq->rear == MAX-1) {
             cq->rear = 0;
-        else
-        cq->rear = cq->rear+1;
+        }
+            
+        else {
+            cq->rear = cq->rear+1;
+        }
     }
+
     cq->cqueue_arr[cq->rear] = item ;
 }
 
 //deleting function
-void dequeue(struct CQueue *cq)
-{
-    if(cq->front == -1)
-    {
+void dequeue(struct CQueue *cq) {
+
+    if(cq->front == -1) {
+
         printf("Warning!! Queue Underflow\n");
         return ;
     }
+    
     printf("Element deleted from queue is : %d\n",cq->cqueue_arr[cq->front]);
     
-    if(cq->front == cq->rear)
-    {
+    if(cq->front == cq->rear) {
+
         cq->front = -1;
         cq->rear=-1;
     }
-    else
-    {
+    
+    else {
+
         if(cq->front == MAX-1)
             cq->front = 0;
         else
@@ -62,41 +70,45 @@ void dequeue(struct CQueue *cq)
 }
 
 //display function
-void display(struct CQueue *cq)
-{
+void display(struct CQueue *cq) {
+
     int front_pos = cq->front, rear_pos = cq->rear;
-    if(cq->front == -1)
-    {
+    if(cq->front == -1) {
+
         printf("\nOops! Queue is empty\n");
         return;
     }
+   
     printf("\nQueue elements are :\n");
-    if( front_pos <= rear_pos )
-        while(front_pos <= rear_pos)
+    if( front_pos <= rear_pos ) {
+         while(front_pos <= rear_pos)
             {
                 printf("%d ",cq->cqueue_arr[front_pos]);
                 front_pos++;
             }
-    else
-    {
-        while(front_pos <= MAX-1)
-        {
+    }
+       
+    else {
+
+        while(front_pos <= MAX-1) {
+
             printf("%d ",cq->cqueue_arr[front_pos]);
             front_pos++;
         }
         front_pos = 0;
-        while(front_pos <= rear_pos)
-        {
+        while(front_pos <= rear_pos) {
+
             printf("%d ",cq->cqueue_arr[front_pos]);
             front_pos++;
         }
     }
+
     printf("\n");
 }
 
 //main function begins 
-int main()
-{
+int main() {
+
     int item = 0, choice = 0;
     struct CQueue cq;  //For circular queue structure instance
 
@@ -110,14 +122,14 @@ int main()
     cq.rear = -1;
 
     //execution loop
-    while(1)
-    {
+    while(1) {
+
         printf("\nThe options available for execution are listed...:\n");
         printf("1. Enqueue  2. Dequeue  3.Display  4.Quit\n");
         printf("Enter your choice : ");
         scanf("%d",&choice);
-        switch(choice)
-        {
+        switch(choice) {
+            
             case 1 :
                     printf("Input the element for insertion in queue : ");
                     scanf("%d", &item);
