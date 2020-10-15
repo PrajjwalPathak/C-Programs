@@ -1,6 +1,6 @@
 #include<math.h>
 #include <string.h>
-#include "Stack.h"   //Custom Header file
+#include <Stack.h>   //Custom Header file
 
 
 char infix_string[SIZE], postfix_string[SIZE];  //For stroing Infix and Postfix separetely
