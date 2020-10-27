@@ -1,4 +1,7 @@
+//Program to print size of different data types
+
 #include<stdio.h>
+
 int main() {
     int a;
     float b;

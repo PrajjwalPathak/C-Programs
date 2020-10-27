@@ -1,3 +1,5 @@
+//Program to insert an element at a particular position in an array
+
 #include<stdio.h>
 
 void Input(int *P, int N) {
