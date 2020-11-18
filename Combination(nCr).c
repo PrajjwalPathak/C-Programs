@@ -1,16 +1,16 @@
 //Program to calculate nCr (Permutation & Combination)
+
 #include<stdio.h>
 
-int fact(int a)
-{
+int fact(int a) {
     if(a==0 || a==1) {
         return 1;
     }
     else {
         return (fact(a-1)*a);
     }
-    
 }
+
 int C(int n,int r) {
 
     int t1=fact(n);
@@ -18,6 +18,7 @@ int C(int n,int r) {
     int t3=fact(r);
     return t1/(t2*t3);
 }
+
 int main() {
 
     int n,r,answer;
@@ -28,8 +29,8 @@ int main() {
     }
     else {
         answer = C(n,r);
-    printf("nCr = ");
-    printf("%d",answer);
+        printf("nCr = ");
+        printf("%d",answer);
     }
     
     return 0;

@@ -18,9 +18,9 @@ int main() {
     sub2 = (y2 - y1) * (y2 - y1);
     sumAll = sub1 + sub2;
     
-    float rz = sqrt(sumAll);
+    float r = sqrt(sumAll);
     
-    printf("%0.2f",rz);
+    printf("%0.2f",r);
     
     return 0;
 }
