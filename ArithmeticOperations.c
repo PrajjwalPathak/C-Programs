@@ -1,4 +1,4 @@
-//Program to apply arithmatic operations on two numbers
+//Program to apply arithmetic operations on two numbers
 
 #include<stdio.h>
 int main() {
@@ -13,14 +13,12 @@ int main() {
     printf("\nSubtraction: %f",c);
     c=a*b;
     printf("\nMultiplication: %f",c);
-    if(b==0)
-    {
-    printf("Division by zero Not possible");
+    if(b==0) {
+        printf("Division by zero Not possible");
     }
-    else
-    {
-    c=a/b;
-    printf("\nDivision: %f",c);
+    else {
+        c=a/b;
+        printf("\nDivision: %f",c);
     }
     return 0;
 }
