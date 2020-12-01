@@ -22,6 +22,7 @@ int main() {
     printf("Enter n: ");
     scanf("%d",&n);
     int a[n];
+    printf("Enter n numbers to find gcd: ");
     for(i=0;i<n;i++) {
         scanf("%d",&a[i]);
     }
