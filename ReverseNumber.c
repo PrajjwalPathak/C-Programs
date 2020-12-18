@@ -3,13 +3,13 @@
 #include<stdio.h>
 
 int reverse(int n) {
-    int rem, temp = 0;
+    int rem, rev = 0;
     while(n!=0) {
         rem = n%10;
-        temp = temp*10 + rem;
+        rev = rev*10 + rem;
         n /=10;
     }
-    return temp;
+    return rev;
 }
 
 int main() {
