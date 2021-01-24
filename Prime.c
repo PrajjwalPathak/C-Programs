@@ -6,7 +6,10 @@ int main() {
     int i,n,flag=0;
     printf("Enter a number: ");
     scanf("%d",&n);
-    if(n==0 || n==1) {
+    if(n<0) {
+        printf("Invalid - Write numbers greater than 0");
+    }
+    else if(n==0 || n==1) {
         printf("Not a Prime");
     }
     else if(n==2 || n==3) {
