@@ -31,7 +31,7 @@ void primeBetweenXY(int x, int y) {
 
 int main() {
     int x,y;
-    printf("Enter x and y to print prime numbers in bewteen them:\n");
+    printf("Enter x and y to print prime numbers in between them:\n");
     scanf("%d %d",&x,&y);
     primeBetweenXY(x, y);
     
